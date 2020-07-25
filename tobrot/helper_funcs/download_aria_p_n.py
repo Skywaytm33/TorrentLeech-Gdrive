@@ -42,6 +42,7 @@ async def aria_start():
     # TODO: this does not work, need to investigate this.
     # but for now, https://t.me/TrollVoiceBot?start=858
     aria2_daemon_start_cmd.append("--enable-rpc")
+    aria2_daemon_start_cmd.append("--bt-detach-seed-only=true")
     aria2_daemon_start_cmd.append("--peer-id-prefix=-TR2610-")
     aria2_daemon_start_cmd.append("--user-agent=Transmission/2.61 (13407)")
     aria2_daemon_start_cmd.append("--follow-torrent=mem")
