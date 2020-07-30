@@ -37,9 +37,7 @@ async def extract_youtube_dl_formats(url, yt_dl_user_name, yt_dl_pass_word, user
         command_to_exec.append("--geo-bypass-country")
         command_to_exec.append("IN")
      if "eporner" in url:
-
         command_to_exec.append("--geo-bypass-country")
-
         command_to_exec.append("US")
     #
     if yt_dl_user_name is not None:
