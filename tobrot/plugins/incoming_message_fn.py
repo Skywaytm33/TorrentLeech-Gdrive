@@ -13,6 +13,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 import os
+import requests
 
 from tobrot import (
     DOWNLOAD_LOCATION
@@ -184,8 +185,10 @@ async def incoming_youtube_dl_f(client, message):
             yt_dl_pass_word,
             user_working_dir
         )
-        gau = thumb_image.replace('vi_webp', 'vi')
-        gau_tam = gau.replace('webp', 'jpg')
+        print(thumb_image)
+        req = requests.get(f"{thumb_image}")
+        gau_tam = f"{current_user_id}.jpg"
+        open(gau_tam, 'wb').write(req.content)
         if thumb_image is not None:
             await message.reply_photo(
                 #text_message,
