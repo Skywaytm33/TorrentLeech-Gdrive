@@ -17,6 +17,7 @@ A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.c
     ✓ You can also upload files downloaded from /ytdl command to gdrive using `/ytdl gdrive` command.
     ✓ You can also deploy this on your VPS
     ✓ Option to select either video will be uploaded as document or streamable
+    ✓ Added /renewme command to clear the downloads which are not deleted automatically.
     ✓
 
 ### Credit goes to SpEcHiDe for his Publicleech repo.
@@ -66,6 +67,8 @@ class Config(Config):
 * `RCLONE_CONFIG`: Create the rclone config using the rclone.org and read the rclone section for the next.
 
 * `DESTINATION_FOLDER`: Name of your folder in ur respective drive where you want to upload the files using the bot.
+
+* `OWNER_ID`: ID of the bot owner, He/she can be able to access bot in bot only mode too.
 
 ##### Set Rclone
 
@@ -145,6 +148,8 @@ and everythin except `[NAME]`
 
 * `TELEGRAM_LEECH_COMMAND_G`
 
+* `UPLOAD_AS_DOC`: Takes two option True or False. If True file will be uploaded as document. This is for people who wants video files as document instead of streamable.
+
 * `INDEX_LINK`: (Without `/` at last of the link, otherwise u will get error) During creating index, plz fill `Default Root ID` with the id of your `DESTINATION_FOLDER` after creating. Otherwise index will not work properly.
 ## Available Commands
 
@@ -181,6 +186,8 @@ and everythin except `[NAME]`
 * `/tleech untar`: This will untar the .tar telegram file and upload to cloud.
 
 * `/getsize`: This will give you total size of your destination folder in cloud.
+
+* `/renewme`: This will clear the remains of downloads which are not getting deleted after upload of the file or after /cancel command. 
 
 
 * [Only work with direct link for now]It is like u can add custom name as prefix of the original file name.
