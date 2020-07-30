@@ -143,7 +143,7 @@ async def youtube_dl_call_back(bot, update):
     if "hotstar" in youtube_dl_url:
         command_to_exec.append("--geo-bypass-country")
         command_to_exec.append("IN")
-    if "eporner" in url:
+    if "eporner" in youtube_dl_url:
         command_to_exec.append("--geo-bypass-country")
         command_to_exec.append("US")
     LOGGER.info(command_to_exec)
