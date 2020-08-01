@@ -99,7 +99,7 @@ if __name__ == "__main__" :
     #
     incoming_g_clear_handler = MessageHandler(
         g_clearme,
-        filters=Filters.command(["renewme@Leecditbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["renewme"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_g_clear_handler)
     #
@@ -111,7 +111,7 @@ if __name__ == "__main__" :
     #
     incoming_youtube_playlist_dl_handler = MessageHandler(
         g_yt_playlist,
-        filters=Filters.command(["pytdl@Leecditbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["pytdl"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_youtube_playlist_dl_handler)
     #
