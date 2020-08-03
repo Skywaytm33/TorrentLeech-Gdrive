@@ -115,7 +115,7 @@ async def youtube_dl_call_back(bot, update):
             # "--external-downloader", "aria2c"
         ]
     else:
-        # command_to_exec = ["youtube-dl", "-f", youtube_dl_format, "--hls-prefer-ffmpeg", "--recode-video", "mp4", "-k", youtube_dl_url, "-o", download_directory]
+        # command_to_exec = ["youtube-dl", --geo-bypass-country", "PK", "-f", youtube_dl_format, "--hls-prefer-ffmpeg", "--recode-video", "mp4", "-k", youtube_dl_url, "-o", download_directory]
         minus_f_format = youtube_dl_format
         if "youtu" in youtube_dl_url:
             for for_mat in response_json["formats"]:
@@ -145,7 +145,7 @@ async def youtube_dl_call_back(bot, update):
         command_to_exec.append("IN")
     if "eporner" in youtube_dl_url:
         command_to_exec.append("--geo-bypass-country")
-        command_to_exec.append("US")
+        command_to_exec.append("IT")
     LOGGER.info(command_to_exec)
     start = datetime.now()
     process = await asyncio.create_subprocess_exec(
