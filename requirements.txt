@@ -4,5 +4,6 @@ hachoir
 Pillow
 https://github.com/pyrogram/pyrogram/archive/asyncio-dev.zip
 tgcrypto
+https://github.com/raff0z/megatools-heroku-buildpack.git
 git+https://github.com/nimma0001/youtube-dl
 hurry.filesize
